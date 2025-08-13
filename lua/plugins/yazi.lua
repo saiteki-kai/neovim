@@ -1,12 +1,14 @@
 ---@type LazySpec
 return {
     "mikavilpas/yazi.nvim",
-    event = "VeryLazy",
+
     dependencies = {
-        { "nvim-lua/plenary.nvim", lazy = true },
+        "nvim-lua/plenary.nvim",
     },
+
+    event = "VeryLazy",
+
     keys = {
-        -- 👇 in this section, choose your own keymappings!
         {
             "<leader>-",
             mode = { "n", "v" },
@@ -14,7 +16,6 @@ return {
             desc = "Open yazi at the current file",
         },
         {
-            -- Open in the current working directory
             "<leader>cw",
             "<cmd>Yazi cwd<cr>",
             desc = "Open the file manager in nvim's working directory",
@@ -25,6 +26,7 @@ return {
             desc = "Resume the last yazi session",
         },
     },
+
     ---@type YaziConfig | {}
     opts = {
         -- if you want to open yazi instead of netrw, see below for more info
@@ -33,7 +35,7 @@ return {
             show_help = "<f1>",
         },
     },
-    -- 👇 if you use `open_for_directories=true`, this is recommended
+
     init = function()
         -- mark netrw as loaded so it's not loaded at all.
         --

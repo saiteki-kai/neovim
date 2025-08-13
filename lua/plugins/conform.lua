@@ -2,17 +2,15 @@
 return {
     "stevearc/conform.nvim",
 
-    enabled = true,
-
-    event = { "BufWritePre" },
-    cmd = { "ConformInfo" },
+    cmd = "ConformInfo",
+    event = "BufWritePre",
 
     opts = {
         notify_on_error = false,
         lsp_fallback = true,
 
         formatters_by_ft = {
-            -- lua = { "stylua" },
+            lua = { "stylua" },
             python = { "ruff" },
             sh = { "shfmt" },
             css = { "prettier" },

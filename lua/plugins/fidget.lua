@@ -1,4 +1,3 @@
----@module "lazy"
 ---@type LazySpec
 return {
     "j-hui/fidget.nvim",
@@ -20,6 +19,7 @@ return {
                 align = "top",
                 y_padding = 1, -- number of cells
                 winblend = 0,
+                border = "single",
             },
         },
     },
